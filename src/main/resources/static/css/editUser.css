@@ -1,0 +1,52 @@
+@charset "ISO-8859-1";
+/* Fichier : resources/static/css/editUser.css */
+
+body {
+    background-color: #fff; /* Couleur de fond du corps de la page (blanc) */
+    color: #3498db; /* Couleur du texte */
+    font-family: Arial, sans-serif; /* Police de caractères */
+}
+
+h2 {
+    color: #3498db; /* Couleur du titre */
+}
+
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #3498db; /* Bordure du formulaire */
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #3498db; /* Couleur de fond du bouton Enregistrer (#3498db) */
+    color: #fff; /* Couleur du texte du bouton Enregistrer */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #217dbb; /* Couleur de fond au survol du bouton (#217dbb) */
+}
+
+a {
+    color: #3498db; /* Couleur du lien Retour à la liste des utilisateurs */
+    text-decoration: none;
+    display: block;
+    margin-top: 15px;
+}

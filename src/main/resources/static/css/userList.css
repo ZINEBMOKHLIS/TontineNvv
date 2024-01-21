@@ -1,0 +1,55 @@
+@charset "ISO-8859-1";
+/* Fichier : resources/static/css/userList.css */
+
+body {
+    background-color: #fff; /* Couleur de fond du corps de la page (blanc) */
+    color: #3498db; /* Couleur du texte */
+    font-family: Arial, sans-serif; /* Police de caractères */
+}
+
+h2 {
+    color: #3498db; /* Couleur du titre */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid black; /* Bordures du tableau */
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #3498db; /* Couleur de fond de l'en-tête du tableau */
+    color: #fff; /* Couleur du texte de l'en-tête du tableau */
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Couleur de fond des lignes paires du tableau (gris clair) */
+}
+
+tr:nth-child(odd) {
+    background-color: #fff; /* Couleur de fond des lignes impaires du tableau (blanc) */
+}
+
+a, button {
+    text-decoration: none; /* Supprime le soulignement des liens */
+    padding: 5px 10px; /* Ajoute du rembourrage autour du lien */
+}
+
+button.edit {
+    background-color: #3498db; /* Couleur de fond du bouton Edit (#3498db) */
+    color: #fff; /* Couleur du texte du bouton Edit */
+    border: 1px solid #3498db; /* Bordure du bouton Edit */
+}
+
+button.delete {
+    background-color: #fff; /* Couleur de fond du bouton Delete (blanc) */
+    color: #3498db; /* Couleur du texte du bouton Delete */
+    border: 1px solid #3498db; /* Bordure du bouton Delete */
+}
+

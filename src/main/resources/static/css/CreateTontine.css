@@ -1,0 +1,51 @@
+@charset "ISO-8859-1";
+/* Fichier CreateTontine.css */
+
+body {
+    background-color: #ffffff; /* Fond de la page */
+    color: #3498db; /* Couleur du texte */
+    font-family: Arial, sans-serif; /* Police de caractères */
+}
+
+h2 {
+    color: #3498db; /* Couleur du titre */
+}
+
+form {
+    max-width: 400px; /* Largeur maximale du formulaire */
+    margin: 20px auto; /* Centrer le formulaire */
+}
+
+label {
+    display: block; /* Afficher chaque label sur une nouvelle ligne */
+    margin-top: 10px; /* Espacement entre les labels */
+}
+
+input {
+    width: 100%; /* Largeur du champ de saisie */
+    padding: 8px; /* Espacement interne du champ de saisie */
+    margin-bottom: 10px; /* Espacement entre les champs de saisie */
+    box-sizing: border-box; /* La largeur et la hauteur incluent le padding et la bordure */
+}
+
+.create-button {
+    background-color: #3498db; /* Couleur de fond du bouton */
+    color: #ffffff; /* Couleur du texte du bouton */
+    padding: 10px 20px; /* Espacement interne du bouton */
+    border: none; /* Supprimer la bordure */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px; /* Coins arrondis */
+}
+
+a {
+    color: #3498db; /* Couleur du lien */
+    text-decoration: none; /* Supprimer la soulignement du lien */
+}
+
+a:hover {
+    text-decoration: underline; /* Soulignement du lien au survol */
+}

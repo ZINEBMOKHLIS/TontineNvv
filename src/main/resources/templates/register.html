@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styleR.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Register Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            background-color: #ffffff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .form-container {
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .social-icons {
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            color: #007bff;
+            font-size: 20px;
+            margin: 0 10px;
+        }
+
+        .form-container span {
+            display: block;
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        .form-container input {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+        }
+
+        .form-container button {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .form-container button:hover {
+            background-color: #0056b3;
+        }
+
+        .error-message {
+            color: #dc3545;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="form-container sign-up">
+            <div th:if="${error}" class="error-message">
+                <p th:text="${error}"></p>
+            </div>
+            <form th:action="@{/register}" th:object="${user}" method="post">
+                <h1>Create Account</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your email for registration</span>
+                <input type="text" th:field="*{nom}" placeholder="Name" required>
+                <input type="text" th:field="*{prenom}" placeholder="Last Name">
+                <input type="email" th:field="*{email}" placeholder="Email" required>
+                <input type="password" th:field="*{password}" placeholder="Password" required>
+                <input type="date" th:field="*{dateNaiss}" placeholder="Date of Birth">
+                <input type="text" th:field="*{adresse}" placeholder="Address">
+                <input type="tel" th:field="*{numTel}" placeholder="Phone Number">
+                <input type="text" th:field="*{profession}" placeholder="Profession">
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

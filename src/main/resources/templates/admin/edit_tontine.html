@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Tontine</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/editTontine.css}">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa; /* Couleur de fond légère */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            width: 300px; /* Ajustez la largeur selon vos besoins */
+        }
+
+        h2 {
+            color: #007bff;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            margin-top: 10px;
+            color: #555; /* Couleur du texte des étiquettes */
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+            margin-top: 10px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Edit Tontine</h2>
+        <form th:action="@{/admin/tontine/edit/{id}(id=${tontine.id})}" method="post" th:object="${tontine}">
+            <label>Nom: </label>
+            <input type="text" th:field="*{nom}" required>
+            <label>Nombre Parts: </label>
+            <input type="number" th:field="*{nombrePart}" required>
+            <label>Date Debut: </label>
+            <input type="text" th:field="*{dateDebut}" required>
+            <label>Date Fin: </label>
+            <input type="text" th:field="*{dateFin}" required>
+            <label>Description: </label>
+            <input type="text" th:field="*{description}" required>
+            <label>Proprietaire: </label>
+            <input type="text" th:field="*{proprietaire}" required>
+            <br>
+            <input type="submit" value="Save">
+        </form>
+        <a th:href="@{/admin/tontines}">Retour à la liste des tontines</a>
+    </div>
+
+</body>
+</html>

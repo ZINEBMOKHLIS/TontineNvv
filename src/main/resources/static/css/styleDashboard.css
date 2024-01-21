@@ -1,0 +1,28 @@
+@charset "ISO-8859-1";
+/* Ajoutez ce style dans votre fichier CSS ou dans une balise <style> dans votre fichier HTML */
+
+/* Style de la boîte de tontine */
+.tontine-box {
+    border: 1px solid #ddd; /* Bordure de 1 pixel avec couleur grise */
+    padding: 15px; /* Marge intérieure de 15 pixels */
+    margin: 10px; /* Marge extérieure de 10 pixels */
+    border-radius: 5px; /* Coins arrondis */
+    background-color: #f9f9f9; /* Couleur de fond */
+}
+
+/* Style du lien pour consulter les détails */
+.tontine-box a {
+    display: block; /* Afficher comme bloc pour occuper toute la largeur */
+    padding: 10px; /* Marge intérieure de 10 pixels */
+    text-align: center; /* Centrer le texte */
+    background-color: #428bca; /* Couleur de fond bleue */
+    color: #fff; /* Couleur du texte blanc */
+    text-decoration: none; /* Supprimer la décoration du lien */
+    border-radius: 3px; /* Coins arrondis */
+}
+
+/* Effet de survol pour le lien */
+.tontine-box a:hover {
+    background-color: #3071a9; /* Changement de couleur au survol */
+    color: #fff; /* Changement de couleur du texte au survol */
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit User</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/editUser.css}">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa; /* Couleur de fond légère */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h2 {
+            color: #007bff; /* Couleur du titre */
+            text-align: center;
+        }
+
+        form {
+            background-color: #ffffff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            width: 300px; /* Ajustez la largeur selon vos besoins */
+        }
+
+        label {
+            color: #555; /* Couleur du texte des étiquettes */
+            display: block;
+            margin: 10px 0;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            color: #007bff;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <form method="post" th:action="@{/admin/user/edit/{id}(id=${user.id})}">
+        <h2>Edit User</h2>
+        <label for="nom">Nom:</label>
+        <input type="text" id="nom" name="nom" th:value="${user.nom}" required>
+        
+        <!-- Ajoutez d'autres champs du formulaire en fonction de votre modèle -->
+
+        <button type="submit">Enregistrer</button><a th:href="@{/admin/users}">Retour à la liste des utilisateurs</a>
+
+    </form>
+    
+</body>
+</html>

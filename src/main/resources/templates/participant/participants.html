@@ -1,0 +1,63 @@
+<!-- src/main/resources/templates/participants.html -->
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des Participants par Tontine</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Ajoutez cette balise dans le head de votre fichier HTML -->
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+        <h2>Liste des Participants par Tontine</h2>
+        <div th:each="tontine : ${tontines}">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" th:text="${tontine.nom}"></h5>
+                    <p class="card-text" th:text="${tontine.description}"></p>
+                    <p class="card-text">Montant de la Tontine: 100 DH<span th:text="${tontine.montant}"></span></p>
+                    <h6 class="card-subtitle mb-2 text-muted">Participants:</h6>
+                    <ul th:each="participant : ${tontine.participants}">
+                        <li th:text="${participant.nom + ' ' + participant.prenom + ' - Montant disponible: ' + participant.montantDisponible}"></li>
+                       
+                    </ul>
+                </div>
+            </div> <a th:href="@{/admin/addParticipant/{id}}" class="btn btn-primary">Ajouter Participant</a>
+             <br><br>
+                   <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" th:text="${tontine.nom}"></h5>
+                    <p class="card-text" th:text="${tontine.description}"></p>
+                    <p class="card-text">Montant de la Tontine: 200 DH<span th:text="${tontine.montant}"></span></p>
+                    <h6 class="card-subtitle mb-2 text-muted">Participants:</h6>
+                    <ul th:each="participant : ${tontine.participants}">
+                        <li th:text="${participant.nom + ' ' + participant.prenom + ' - Montant disponible: ' + participant.montantDisponible}"></li>
+                       
+                    </ul>
+                </div>
+            </div> <a th:href="@{/admin/addParticipant/{id}}" class="btn btn-primary">Ajouter Participant</a> 
+            <br><br>
+             <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" th:text="${tontine.nom}"></h5>
+                    <p class="card-text" th:text="${tontine.description}"></p>
+                    <p class="card-text">Montant de la Tontine: 300 DH<span th:text="${tontine.montant}"></span></p>
+                    <h6 class="card-subtitle mb-2 text-muted">Participants:</h6>
+                    <ul th:each="participant : ${tontine.participants}">
+                        <li th:text="${participant.nom + ' ' + participant.prenom + ' - Montant disponible: ' + participant.montantDisponible}"></li>
+                       
+                    </ul>
+                </div>
+            </div> <a th:href="@{/admin/addParticipant/{id}}" class="btn btn-primary">Ajouter Participant</a> 
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

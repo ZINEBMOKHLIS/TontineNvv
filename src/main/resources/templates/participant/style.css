@@ -1,0 +1,52 @@
+/* Ajoutez ce code dans un fichier CSS séparé ou dans la balise <style> du fichier HTML */
+/* Ajoutez ce code dans votre fichier style.css */
+
+/* Fond de la page */
+body {
+    background-color: #f8f9fa; /* Couleur de fond légère */
+}
+
+/* Titre principal */
+h2 {
+    color: #007bff; /* Couleur bleue pour le titre principal */
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Carte */
+.card {
+    border: 2px solid #007bff; /* Bordure bleue pour les cartes */
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+/* Titre de la carte */
+.card-title {
+    color: #007bff; /* Couleur bleue pour le titre de la carte */
+}
+
+/* Texte secondaire */
+.text-muted {
+    color: #6c757d; /* Couleur grise pour le texte secondaire */
+}
+
+/* Bouton Ajouter */
+.btn-primary {
+    background-color: #28a745; /* Couleur verte pour le bouton Ajouter */
+    border-color: #28a745;
+}
+
+/* Liens */
+a {
+    color: #007bff; /* Couleur bleue pour les liens */
+}
+
+/* Espacement entre les cartes */
+.card + a {
+    margin-top: 10px;
+}
+
+/* Espacement entre les boutons et le texte */
+a + br {
+    margin-top: 10px;
+}

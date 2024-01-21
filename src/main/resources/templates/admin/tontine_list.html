@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Tontine List</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/tontineList.css}">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e6f7ff; /* Bleu clair */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h2 {
+            color: #004080; /* Bleu foncé */
+            text-align: center;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0px 0px 10px rgba(0, 64, 128, 0.1); /* Ombre bleu */
+            background-color: #ffffff; /* Blanc */
+        }
+
+        th, td {
+            border: 1px solid #b3cce6; /* Bordure bleu clair */
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #004080; /* Bleu foncé */
+            color: #ffffff; /* Blanc */
+        }
+
+        tr:nth-child(even) {
+            background-color: #cce0ff; /* Bleu clair */
+        }
+
+        .edit, .delete {
+            background-color: #004080; /* Bleu foncé */
+            color: #ffffff; /* Blanc */
+            border: none;
+            padding: 8px 12px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .edit:hover, .delete:hover {
+            background-color: #001a33; /* Bleu foncé plus sombre */
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            color: #004080; /* Bleu foncé */
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Tontine List</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nom</th>
+            <th>Nombre Parts</th>
+            <th>Date Debut</th>
+            <th>Date Fin</th>
+            <th>Description</th>
+            <th>Actions</th>
+        </tr>
+        <tr th:each="tontine : ${tontines}">
+            <td th:text="${tontine.id}"></td>
+            <td th:text="${tontine.nom}"></td>
+            <td th:text="${tontine.nombrePart}"></td>
+            <td th:text="${tontine.dateDebut}"></td>
+            <td th:text="${tontine.dateFin}"></td>
+            <td th:text="${tontine.description}"></td>
+            <td>
+                <a th:href="@{/admin/tontine/edit/{id}(id=${tontine.id})}">
+                    <button class="edit">Edit</button>
+                </a>
+                <a th:href="@{/admin/tontine/delete/{id}(id=${tontine.id})}">
+                    <button class="delete">Delete</button>
+                </a>
+            </td>
+        </tr>
+    </table>
+    <a th:href="@{/admin/dashboard}">Retour au tableau de bord</a>
+
+</body>
+</html>
